@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>在线投稿审稿管理系统</title>
+        <style>
+	        body {width: 100%;min-width: 1200px;background: url(/static/book.jpg) no-repeat center center fixed;-webkit-background-size: cover;-o-background-size: cover;background-size: cover;}
+            .x { width: 90%; margin: 0 auto}
+            .y { width: 20%;margin: 0 auto;}
+            form .yy {border:1px solid black;background-color:#009FCC;height:60px}
+            form .yyy {border:1px solid black;height:160px;background-color:white}
+            a:link {display:block;width:250px;text-decoration: none;font-size:20px;color:black;}
+            a:visited {display:block;width:250px;text-decoration: none;font-size:20px;color:black;}
+            a:hover{font-size:25px;color:blue;}
+        </style>
+    </head>
+    <body>
+    {% for i in  ade  %}
+        {{ i.admin_id }}
+        {{ i.admin_name }}
+        {{ i.admin_pass }}
+        {{ i.admin_phone }}
+    {% endfor %}
+        <div class="x">
+            <p style="font-size:80px;font-family:华文彩云;text-align:center;">欢迎使用在线投稿审稿系统</p>
+        </div>
+        <form class="y">
+            <div class="yy">
+                <p style="font-size:30px;text-align:center;margin-top:10px">请选择您的身份</p>
+            </div>
+            <div class="yyy">
+                <a href="../denglu1" style="display:block;width:250px;margin:20px auto auto 120px">投稿人</a>
+                <a href="../denglu2" style="display:block;width:250px;margin:20px auto auto 120px">审稿人</a>
+                <a href="../denglu" style="display:block;width:250px;margin:20px auto auto 100px">系统管理员</a>
+            </div>
+        </form>
+    </body>
+</html>
+
+

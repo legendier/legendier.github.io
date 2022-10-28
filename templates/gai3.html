@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>系统管理员修改密码</title>
+        <style>
+            body {width: 100%;min-width: 1200px;background: url(/static/book.jpg) no-repeat center center fixed;-webkit-background-size: cover;-o-background-size: cover;background-size: cover;}
+	        .x {width: 30%;margin: 130px auto;}
+            form .x1 {border:1px solid black}
+            form .x2 {border:1px solid black;height:300px;background-color:#FFF0F5}
+            form .label {margin:auto auto auto 80px}
+            form .err {color:red;font-size:10px}
+	</style>
+    </head>
+    <body>
+        <form class="x" method="post">
+            <div class="x1">
+                <p style="font-size:30px;text-align:center;height:20px">系统管理员修改密码</p>
+            </div>
+            <div class="x2">
+                <p style="margin-top:40px">
+                    <label for="i2" class="label">请输入原密码:</label>
+                    <input type="password" id="i2" name="password" maxlength="20" style="margin-top:10px" value="" />
+                    <span class="err">{{ err1 }}</span>
+                </p>
+                <p style="margin-top:25px">
+                    <label for="i2" class="label">请输入新密码:</label>
+                    <input type="password" id="i2" name="password1" maxlength="20" style="margin-top:10px" value="" />
+                    <span class="err">{{ err2 }}</span>
+                </p>
+                <p style="margin:30px auto auto -32px">
+                    <label for="i3" class="label">请重新输入新密码:</label>
+                    <input type="password" id="i3" name="password2" maxlength="20"  value="" />
+                    <span class="err">{{ err3 }}</span>
+                </p>
+                <span>
+                    <input type="submit"  name="submit" style="width: 70px;margin:40px auto auto 200px;" value="确认修改" />
+                </span>
+                <span>
+                    <input type="button" onclick="window.location.href='../guanliyuan'" style="width: 60px;margin:20px auto auto 40px" value="返回" />
+                </span>
+            </div>
+        </form>
+    </body>
+</html>
+
+
+

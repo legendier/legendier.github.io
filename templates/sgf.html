@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>稿费</title>
+    <style>
+        body {width: 100%;min-width: 1200px;background: url(/static/book.jpg) no-repeat center center fixed;-webkit-background-size: cover;-o-background-size: cover;background-size: cover;}
+        .k {margin-left:200px}
+</style>
+</head>
+<body>
+    <span>
+        <input type="button" onclick=location.href=("../guanliyuan") style="width: 60px;margin:20px auto auto 1400px" value="返回" />
+    </span>
+    <div class="k">
+        <p style="text-align:center;font-size:30px;margin-top:10px;margin-bottom:20px;margin-left:-280px">稿费</p>
+        <table width="80%" style="border-collapse:collapse; border-top:2px solid #000000;border-bottom:2px solid #000000;table-layout:fixed;word-break:break-all;">
+            <tr>
+                <th style="padding:80px;padding-top:10px;padding-bottom:10px;border:1px solid black;border-left:none">作者编号</th>
+                <th style="padding:80px;padding-top:10px;padding-bottom:10px;border:1px solid black">稿件编号</th>
+                <th style="padding:80px;padding-top:10px;padding-bottom:10px;border:1px solid black;border-right:none">稿费(元)</th>
+            </tr>
+             {% for i in ar %}
+                <tr>
+                    <td style="padding-top:10px;padding-bottom:10px;border:1px solid black;border-left:none;text-align:center">{{ i.author_id }}</td>
+                    <td style="padding-top:10px;padding-bottom:10px;border:1px solid black;text-align:center">{{ i.article_id }}</td>
+                    <td style="padding-top:10px;padding-bottom:10px;border:1px solid black;text-align:center;border-right:none">{{ i.article_money  }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
