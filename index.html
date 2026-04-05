@@ -2,23 +2,20 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>⚡ 炫酷简历 | 陈宇轩 · 全栈开发</title>
-    <!-- 外部样式 & 字体库 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="陈宇轩 - 全栈开发工程师简历 | 5年+前后端开发经验，擅长React、Vue、Node.js">
+    <title>陈宇轩 | 全栈开发工程师</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- 动态粒子画布 -->
     <canvas id="particle-canvas"></canvas>
-    <!-- 鼠标光晕特效 -->
     <div class="glow-cursor" id="glowCursor"></div>
 
-    <!-- 下滑指示器 (仅当内容超过一屏时显示，滚动后渐隐) -->
     <div class="scroll-indicator" id="scrollIndicator">
-        <span class="scroll-text">下滑</span>
+        <span class="scroll-text">向下滚动</span>
         <div class="scroll-arrow">
             <i class="fas fa-chevron-down"></i>
             <i class="fas fa-chevron-down"></i>
@@ -27,58 +24,55 @@
 
     <div class="container">
         <div class="resume-grid">
-            <!-- 左侧区域：个人信息 + 联系 + 社交 -->
             <aside class="sidebar">
                 <div class="glass-card avatar-section fade-up">
                     <div class="avatar-icon">
-                        <!-- 使用外部图片: images/avatar.svg (炫酷风格头像) -->
-                        <img src="images/avatar.svg" alt="avatar" class="avatar-img">
+                        <img src="images/avatar.svg" alt="陈宇轩头像" class="avatar-img">
                     </div>
                     <h1>陈宇轩</h1>
                     <div class="title">
                         <i class="fas fa-code"></i> 全栈开发工程师
                     </div>
                     <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-dev"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:yuxuan.chen@dev.me"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
-                <div class="glass-card fade-up" style="padding: 1.5rem;">
-                    <h3 style="margin-bottom: 1rem; display: flex; gap: 0.6rem;"><i class="fas fa-user-circle" style="color:#0ff;"></i> 关于我</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.5;">💡 5年+全栈经验，热爱构建优雅、高性能的Web应用。擅长React/Vue生态与Node.js，对前沿技术保持狂热。极客精神 + 设计思维。</p>
+                <div class="glass-card contact-section fade-up">
+                    <h3 class="section-subtitle">关于我</h3>
+                    <p class="about-text">5年+全栈开发经验，专注于构建高性能Web应用。熟悉React、Vue生态，熟悉Node.js后端开发，注重代码质量与用户体验。</p>
                     
-                    <h3 style="margin: 1.6rem 0 0.8rem;"><i class="fas fa-address-card" style="color:#0ff;"></i> 联系方式</h3>
+                    <h3 class="section-subtitle">联系方式</h3>
                     <div class="info-item"><i class="fas fa-phone-alt"></i> <span>+86 130 1234 5678</span></div>
                     <div class="info-item"><i class="fas fa-envelope"></i> <span>yuxuan.chen@dev.me</span></div>
-                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>中国 · 上海</span></div>
-                    <button class="btn-download" id="downloadBtn"><i class="fas fa-download"></i> 下载简历 (PDF)</button>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>上海，中国</span></div>
+                    
+                    <button class="btn-download" id="downloadBtn">
+                        <i class="fas fa-download"></i> 下载简历
+                    </button>
                 </div>
             </aside>
 
-            <!-- 右侧主要内容区 -->
             <main class="main-content">
-                <!-- 工作经验 -->
                 <div class="glass-card section-card fade-up">
                     <div class="section-title">
                         <i class="fas fa-briefcase"></i> 
                         <span>工作经验</span>
                     </div>
                     <div class="exp-item">
-                        <h3>资深前端工程师 · 星云科技 (上海)</h3>
+                        <h3>星云科技 · 资深前端工程师</h3>
                         <div class="date"><i class="far fa-calendar-alt"></i> 2022.04 – 至今</div>
-                        <p>负责低代码平台核心模块开发，使用React+TypeScript+Redux Toolkit，优化渲染性能提升35%；设计可复用组件库并落地微前端架构，支撑3条产品线。</p>
+                        <p>负责低代码平台核心模块开发，使用React+TypeScript+Redux Toolkit，优化渲染性能提升35%。设计可复用组件库并落地微前端架构，支撑3条产品线。</p>
                     </div>
                     <div class="exp-item">
-                        <h3>全栈开发工程师 · 深蓝互动</h3>
+                        <h3>深蓝互动 · 全栈开发工程师</h3>
                         <div class="date"><i class="far fa-calendar-alt"></i> 2019.07 – 2022.02</div>
-                        <p>基于Vue3+Node.js(NestJS)开发企业级后台系统，设计RESTful API及数据库优化；主导重构用户权限模块，降低40%接口响应时间。</p>
+                        <p>基于Vue3+Node.js(NestJS)开发企业级后台系统，设计RESTful API及数据库优化。主导重构用户权限模块，降低40%接口响应时间。</p>
                     </div>
                 </div>
 
-                <!-- 教育背景 -->
                 <div class="glass-card section-card fade-up">
                     <div class="section-title">
                         <i class="fas fa-graduation-cap"></i>
@@ -87,27 +81,25 @@
                     <div class="edu-item">
                         <h3>复旦大学 · 软件工程硕士</h3>
                         <div class="date">2023 – 2025 (在读) | GPA 3.9/4.0</div>
-                        <p>研究方向: 前端架构 & WebAssembly 高性能计算</p>
+                        <p>研究方向：前端架构、视觉交互开发</p>
                     </div>
                     <div class="edu-item">
                         <h3>南京大学 · 计算机科学与技术 学士</h3>
                         <div class="date">2015 – 2019 | 校优秀毕业生</div>
-                        <p>主修课程: 数据结构、操作系统、计算机网络，毕业设计获院级一等奖。</p>
                     </div>
                 </div>
 
-                <!-- 专业技能 (带动态进度条) -->
                 <div class="glass-card section-card fade-up" id="skills-section">
                     <div class="section-title">
                         <i class="fas fa-microchip"></i>
-                        <span>技术栈 & 掌握程度</span>
+                        <span>技术栈</span>
                     </div>
                     <div class="skill-item">
                         <div class="skill-info"><span>JavaScript / TypeScript</span><span>90%</span></div>
                         <div class="progress-bar-bg"><div class="progress-fill" data-target="90"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>React & Next.js</span><span>88%</span></div>
+                        <div class="skill-info"><span>React / Next.js</span><span>88%</span></div>
                         <div class="progress-bar-bg"><div class="progress-fill" data-target="88"></div></div>
                     </div>
                     <div class="skill-item">
@@ -119,43 +111,41 @@
                         <div class="progress-bar-bg"><div class="progress-fill" data-target="85"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>CSS3 / Tailwind / Framer</span><span>92%</span></div>
-                        <div class="progress-bar-bg"><div class="progress-fill" data-target="92"></div></div>
+                        <div class="skill-info"><span>CSS / Tailwind / Animation</span><span>90%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-fill" data-target="90"></div></div>
                     </div>
                 </div>
 
-                <!-- 精选项目 (炫酷卡片) -->
                 <div class="glass-card section-card fade-up">
                     <div class="section-title">
                         <i class="fas fa-rocket"></i>
-                        <span>前沿项目</span>
+                        <span>项目经历</span>
                     </div>
                     <div class="projects-grid">
                         <div class="project-card">
                             <i class="fab fa-react"></i>
                             <h4>Nebula Admin</h4>
-                            <p>React + Ant Design + Vite，动态权限，实时仪表盘，日均请求20w+</p>
+                            <p>React + Ant Design + Vite，动态权限系统，日均请求20w+</p>
                         </div>
                         <div class="project-card">
                             <i class="fab fa-vuejs"></i>
                             <h4>Vision Flow</h4>
-                            <p>可视化拖拽编辑器，Vue3 + Pinia + Canvas API，支持导出代码片段</p>
+                            <p>可视化拖拽编辑器，Vue3 + Pinia + Canvas API</p>
                         </div>
                         <div class="project-card">
-                            <i class="fas fa-cloud-moon"></i>
+                            <i class="fas fa-robot"></i>
                             <h4>AI 面试模拟器</h4>
-                            <p>Next.js + OpenAI API + WebRTC，语音交互，斩获黑客松最佳创新奖</p>
+                            <p>Next.js + OpenAI API，黑客松最佳创新奖</p>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
         <footer>
-            <i class="fas fa-bolt"></i> 随时在线 · 匠心编码 · 时刻创新 <i class="fas fa-bolt"></i>
+            <i class="fas fa-bolt"></i> 让技术创造价值 <i class="fas fa-bolt"></i>
         </footer>
     </div>
 
-    <!-- 外部JS文件 -->
     <script src="js/main.js"></script>
 </body>
 </html>
