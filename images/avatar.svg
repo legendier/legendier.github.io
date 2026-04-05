@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="100%" stop-color="#a020f0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0.2"/>
+    </radialGradient>
+  </defs>
+  <!-- 背景圆形 -->
+  <circle cx="100" cy="100" r="95" fill="url(#grad)" opacity="0.2"/>
+  <circle cx="100" cy="100" r="90" fill="#0a0c12" stroke="#0ff" stroke-width="2"/>
+  <!-- 科幻头盔风格 -->
+  <path d="M70 80 Q100 50 130 80 L125 110 Q100 130 75 110 Z" fill="url(#glow)" stroke="#0ff" stroke-width="1.5"/>
+  <circle cx="85" cy="95" r="6" fill="#0ff" opacity="0.8"/>
+  <circle cx="115" cy="95" r="6" fill="#0ff" opacity="0.8"/>
+  <path d="M95 108 Q100 115 105 108" stroke="#0ff" stroke-width="2" fill="none"/>
+  <!-- 科技线条 -->
+  <path d="M50 150 L80 140 M150 150 L120 140" stroke="#0ff" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.7"/>
+  <circle cx="100" cy="160" r="8" fill="none" stroke="#0ff" stroke-width="1.5"/>
+  <circle cx="100" cy="160" r="3" fill="#0ff"/>
+</svg>
